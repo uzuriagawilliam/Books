@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Books.API.Migrations
 {
     [DbContext(typeof(BookDbContext))]
-    [Migration("20231005154648_InitMig")]
-    partial class InitMig
+    [Migration("20231023135219_newOld3")]
+    partial class newOld3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,53 +47,18 @@ namespace Books.API.Migrations
                         },
                         new
                         {
-                            AuthorsId = new Guid("34dfab3c-5ec4-11ee-8c99-0242ac120002"),
+                            AuthorsId = new Guid("34dfaf74-5ec4-11ee-8c99-0242ac120002"),
                             BooksId = new Guid("8e7e79b6-6095-11ee-8c99-0242ac120002")
                         },
                         new
                         {
-                            AuthorsId = new Guid("34dfae16-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("d28888e9-2ba9-473a-a40f-e38cb54f9b35")
-                        },
-                        new
-                        {
-                            AuthorsId = new Guid("34dfae16-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("8e7e7c4a-6095-11ee-8c99-0242ac120002")
-                        },
-                        new
-                        {
-                            AuthorsId = new Guid("34dfae16-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("48754f0c-609b-11ee-8c99-0242ac120002")
-                        },
-                        new
-                        {
                             AuthorsId = new Guid("34dfaf74-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("da2fd609-d754-4feb-8acd-c4f9ff13ba96")
-                        },
-                        new
-                        {
-                            AuthorsId = new Guid("34dfaf74-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("8e7e82f8-6095-11ee-8c99-0242ac120002")
-                        },
-                        new
-                        {
-                            AuthorsId = new Guid("34dfaf74-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("8e7e841a-6095-11ee-8c99-0242ac120002")
+                            BooksId = new Guid("d28888e9-2ba9-473a-a40f-e38cb54f9123")
                         },
                         new
                         {
                             AuthorsId = new Guid("34dfb30c-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("c19099ed-94db-44ba-885b-0ad7205d5e40")
-                        },
-                        new
-                        {
-                            AuthorsId = new Guid("34dfb30c-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("48754840-609b-11ee-8c99-0242ac120002")
-                        },
-                        new
-                        {
-                            AuthorsId = new Guid("34dfb30c-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("48754afc-609b-11ee-8c99-0242ac120002")
+                            BooksId = new Guid("8e7e76fa-6095-11ee-8c99-0242ac120002")
                         });
                 });
 
@@ -121,12 +86,6 @@ namespace Books.API.Migrations
                             Id = new Guid("34dfab3c-5ec4-11ee-8c99-0242ac120002"),
                             Country = "Brasil",
                             Name = "Paulo Coelho"
-                        },
-                        new
-                        {
-                            Id = new Guid("34dfae16-5ec4-11ee-8c99-0242ac120002"),
-                            Country = "Israel",
-                            Name = "Yuval Noah Harari"
                         },
                         new
                         {
@@ -178,60 +137,6 @@ namespace Books.API.Migrations
                             Id = new Guid("8e7e79b6-6095-11ee-8c99-0242ac120002"),
                             Description = "Nullam justo nisi, sagittis nec mattis nec, tincidunt sit amet urna",
                             Title = "PRIDE AND PREJUDICE "
-                        },
-                        new
-                        {
-                            Id = new Guid("d28888e9-2ba9-473a-a40f-e38cb54f9b35"),
-                            Description = "Quisque iaculis lobortis porta",
-                            Title = "A Brief History of Humankind"
-                        },
-                        new
-                        {
-                            Id = new Guid("8e7e7c4a-6095-11ee-8c99-0242ac120002"),
-                            Description = "Quisque iaculis lobortis porta",
-                            Title = "A Brief History of Humankind"
-                        },
-                        new
-                        {
-                            Id = new Guid("48754f0c-609b-11ee-8c99-0242ac120002"),
-                            Description = "Quisque iaculis lobortis porta",
-                            Title = "A Brief History of Humankind"
-                        },
-                        new
-                        {
-                            Id = new Guid("da2fd609-d754-4feb-8acd-c4f9ff13ba96"),
-                            Description = "Pellentesque vel suscipit metus.",
-                            Title = "Untamed"
-                        },
-                        new
-                        {
-                            Id = new Guid("8e7e82f8-6095-11ee-8c99-0242ac120002"),
-                            Description = "Pellentesque vel suscipit metus.",
-                            Title = "Untamed"
-                        },
-                        new
-                        {
-                            Id = new Guid("8e7e841a-6095-11ee-8c99-0242ac120002"),
-                            Description = "Pellentesque vel suscipit metus.",
-                            Title = "Untamed"
-                        },
-                        new
-                        {
-                            Id = new Guid("c19099ed-94db-44ba-885b-0ad7205d5e40"),
-                            Description = "In quis purus facilisis, vehicula magna at, aliquam orci",
-                            Title = "Beloved"
-                        },
-                        new
-                        {
-                            Id = new Guid("48754840-609b-11ee-8c99-0242ac120002"),
-                            Description = "In quis purus facilisis, vehicula magna at, aliquam orci",
-                            Title = "Beloved"
-                        },
-                        new
-                        {
-                            Id = new Guid("48754afc-609b-11ee-8c99-0242ac120002"),
-                            Description = "In quis purus facilisis, vehicula magna at, aliquam orci",
-                            Title = "Beloved"
                         });
                 });
 

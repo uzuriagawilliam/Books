@@ -10,7 +10,7 @@ namespace Books.API.Profiles
         {
             CreateMap<AddBookDto, Book>();
             CreateMap<Book, BookDto>()
-            .ForMember(b => b.Author, opt => opt.MapFrom(
+            .ForMember(b => b.AutorsList, opt => opt.MapFrom(
                 src => src.Authors.Select(
                     author => author.Name
                     )

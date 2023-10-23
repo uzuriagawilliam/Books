@@ -3,6 +3,7 @@ using System;
 using Books.Api.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Books.API.Migrations
 {
     [DbContext(typeof(BookDbContext))]
-    partial class BookDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231023133715_newOld2")]
+    partial class newOld2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.11");
@@ -30,33 +33,6 @@ namespace Books.API.Migrations
                     b.HasIndex("BooksId");
 
                     b.ToTable("AuthorBook");
-
-                    b.HasData(
-                        new
-                        {
-                            AuthorsId = new Guid("34dfab3c-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("d28888e9-2ba9-473a-a40f-e38cb54f9123")
-                        },
-                        new
-                        {
-                            AuthorsId = new Guid("34dfab3c-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("8e7e76fa-6095-11ee-8c99-0242ac120002")
-                        },
-                        new
-                        {
-                            AuthorsId = new Guid("34dfaf74-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("8e7e79b6-6095-11ee-8c99-0242ac120002")
-                        },
-                        new
-                        {
-                            AuthorsId = new Guid("34dfaf74-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("d28888e9-2ba9-473a-a40f-e38cb54f9123")
-                        },
-                        new
-                        {
-                            AuthorsId = new Guid("34dfb30c-5ec4-11ee-8c99-0242ac120002"),
-                            BooksId = new Guid("8e7e76fa-6095-11ee-8c99-0242ac120002")
-                        });
                 });
 
             modelBuilder.Entity("Books.Api.Entities.Author", b =>

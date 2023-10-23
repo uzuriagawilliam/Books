@@ -9,7 +9,7 @@ namespace Books.API.Controller
 {
     [ApiController]
     [Route("api/books")]
-    [Authorize]
+    //[Authorize]
     public class BooksController : ControllerBase
     {
         private readonly IMapper mapper;
@@ -25,7 +25,7 @@ namespace Books.API.Controller
         public async Task<ActionResult<List<BookDto>>> GetBooks()
         {            
             var books = await bookRepo.GetBooks();
-
+            
             if (books == null)
             {
                 return NoContent();

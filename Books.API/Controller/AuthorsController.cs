@@ -11,7 +11,7 @@ namespace Books.API.Controller
 {
     [ApiController]
     [Route("api/authors")]
-    [Authorize]
+    //[Authorize]
     public class AuthorsController : ControllerBase
     {
         private readonly BookDbContext bookDb;
